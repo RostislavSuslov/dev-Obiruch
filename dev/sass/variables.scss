@@ -1,0 +1,39 @@
+///fonts///
+$font-primary: "Inter";
+$font-secondary: "monospace";
+$font-size: 16px;
+$line-height: 1.5;
+$text: #626874;
+$section-title: 32px;
+///colors///
+$white: #fff;
+$black: #000;
+
+$primary-color: #3943BC;
+$primary-color-hover: #5864F9;
+
+$secondary-color: #FFD600;
+$secondary-color-hover: #FFE454;
+
+
+/*grey*/
+$label-red: #f93838;
+$label-purpur: #8683ef;
+$label-green: #70d61f;
+
+$required: $primary-color;
+$placeholder: #626874;
+
+ 
+
+
+
+/*   <Breadcrumbs/>   */
+$breadcrumbs-slash: #afb4be;
+$breadcrumbs-link: #3c597d;
+$breadcrumbs-link-hover: $primary-color;
+$breadcrumbs-last-child: #afb4be;
+
+/*   <Muve-top/>   */
+$muve-top-background: $primary-color;
+$muve-top-color: #fff;
