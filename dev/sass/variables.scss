@@ -37,3 +37,7 @@ $breadcrumbs-last-child: #afb4be;
 /*   <Muve-top/>   */
 $muve-top-background: $primary-color;
 $muve-top-color: #fff;
+
+@mixin custom-decorate { 
+    background: url(assets/img/custom-decorate.svg) calc(100% - 60px) center no-repeat  $primary-color;
+ }

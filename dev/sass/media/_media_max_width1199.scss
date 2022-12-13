@@ -211,7 +211,10 @@
 
     .header .sub-menu,
     .phone-dropdown__menu {
-        top: 55px;
+        top: 67px;
+    }
+    .lang-dropdown__menu {
+        top: 81px;
     }
 }
 
@@ -226,8 +229,17 @@
 
  
 
-    .header .menu-item-has-children .sub-menu {
-        top: 62px;
+   
+    .lang-dropdown__menu {
+        top: 80px;
+    }
+
+    .header .sub-menu{
+        top: 68px;
+    }
+    
+    .phone-dropdown__menu {
+        top: 80px;
     }
 
     .phone-dropdown__top {
@@ -532,7 +544,7 @@
 
                 &:nth-child(3) {
                     transform: rotate(-45deg);
-                    bottom: 10px;
+                    bottom: 11px;
                 }
             }
         }

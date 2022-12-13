@@ -11,7 +11,7 @@
         font-weight: 500;
 
         &:hover:not(.btn) {
-            color: #009edd;
+            color: $secondary-color;
         }
     }
 
@@ -62,21 +62,21 @@
 
             &:hover {
                 path {
-                    fill: #009edd;
+                    fill: $secondary-color;
                 }
             }
         }
 
         &.open-menu {
             >a {
-                color: #009edd;
+                color: $secondary-color;;
             }
 
             svg {
                 transform: scale(1, -1);
 
                 path {
-                    fill: #009edd;
+                    fill: $secondary-color;
                 }
             }
 
@@ -88,17 +88,17 @@
     }
 
     .sub-menu {
+		@include custom-decorate;
         position: absolute;
         display: flex;
         flex-direction: column;
-        background-color: #fff;
         padding: 30px;
         border-radius: 12px;
         left: -30px;
         top: 78px;
         opacity: 0;
         pointer-events: none;
-
+		
         li+li {
             margin-left: 0;
             margin-top: 18px;
@@ -112,7 +112,7 @@
     nav {
         ul {
             a:hover {
-                color: #009edd;
+                color: #5864F9;
             }
         }
     }
@@ -144,7 +144,7 @@
 
         a {
             font-size: 16px;
-            font-weight: 700;
+            font-weight: 500;
         }
 
         svg {
@@ -155,19 +155,23 @@
     }
 
     &__menu {
+		@include custom-decorate;
         position: absolute;
-        background-color: #fff;
-        padding: 30px 30px 35px;
+        background-color: $primary-color;
+        padding: 30px 30px 36px;
         border-radius: 12px;
         width: max-content;
         flex-direction: column;
         display: none;
-        top: 60px;
+        top: 72px;
         box-shadow: 0px 0px 6px #0b305d33;
         right: 0;
 
         ul {
             margin: 0;
+			li{
+				margin-bottom: 6px;
+			}
         }
 
         a {
@@ -177,13 +181,18 @@
             &+a {
                 margin-left: 12px;
             }
-        }
+			
+			img {
+				filter: brightness(0) invert(1);
+			}
+		}
 
         .email {
             font-size: 16px;
-            color: $primary-color;
+            color: $secondary-color;
             margin-top: 24px;
-            margin-bottom: 35px;
+            margin-bottom: 36px;
+			font-weight: 400;
         }
 
         .btn {
@@ -209,12 +218,12 @@
 
     &__menu {
         position: absolute;
-        background-color: #fff;
+        background-color: $primary-color;
         box-shadow: 0px 0px 6px #0b305d33;
         padding: 30px 30px 35px;
         border-radius: 12px;
         min-width: 220px;
-        top: 60px;
+        top: 84px;
         right: 0;
         display: none;
 
@@ -270,6 +279,7 @@
 		position: absolute;
 		right: 0;
 		border-radius: 3px;
+		transition: all 0.2s;
 
         &:nth-child(1) {
             top: 3px;
@@ -278,7 +288,6 @@
         &:nth-child(2) {
             top: 50%;
             margin-top: -1px;
-            transition: all 0.2s;
         }
 
         &:nth-child(3) {
