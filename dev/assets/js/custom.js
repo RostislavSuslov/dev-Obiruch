@@ -32,7 +32,7 @@ $(document).ready(function() {
     });
     $(".slider-partner").slick({
         centerMode: true,
-        slidesToShow: 3,
+        slidesToShow: 1,
         dots: true,
         responsive: [{
             breakpoint: 1124,
@@ -113,7 +113,4 @@ $(document).ready(function() {
         $("body").toggleClass("open-menu-body");
     });
 
-    
-
-  
 });

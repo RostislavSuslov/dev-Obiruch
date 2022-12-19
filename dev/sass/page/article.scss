@@ -75,20 +75,20 @@
 
     thead {
         tr {
-            border-bottom: 2px solid #AFB4BE;
+            border-bottom: 2px solid #B1AFBE;
         }   
     } 
     
     tr {
         border-bottom: 1px solid #CBD0DA;
         &:last-child {
-            border-bottom: 2px solid #AFB4BE;
+            border-bottom: 2px solid #B1AFBE;
         }
     }
 
     td {
         padding: 17px 20px;
-        color: #626874;
+        color: #5C5F65;
         vertical-align: middle;
     }
     

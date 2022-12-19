@@ -88,7 +88,6 @@
     }
 
     .sub-menu {
-		@include custom-decorate;
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -155,7 +154,7 @@
     }
 
     &__menu {
-		@include custom-decorate;
+		@include custom-decorate-r;
         position: absolute;
         background-color: $primary-color;
         padding: 30px 30px 36px;

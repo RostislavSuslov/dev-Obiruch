@@ -1,6 +1,7 @@
 
 .partner {
-    padding: 80px 0;
+    padding: 90px 0;
+    background-color: $primary-color;
 
     .wrapper-partner-slider {
         max-width: 1840px;
@@ -15,11 +16,11 @@
 }
 
 .slider-partner.slider-def {
-    padding: 100px 0px 120px;
-    margin-top: -100px;
-
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 60px;
     .item-partner-coment {
-        margin: 60px 0px 0;
+        margin: 0;
         opacity: 0.5;
         transform: scale(0.8);
         transition: all 0.3s;
@@ -31,34 +32,42 @@
     }
 
     .slick-next {
-        right: 310px;
+        right: 5px;
     }
 
     .slick-prev {
-        left: 310px;
+        left: 5px;
     }
 
     .slick-dots li {
         background: #cbd0da;
     }
 
-    .slick-dots .slick-active {
-        background: $secondary-color;
+    .slick-dots{
+        position: static;
+        margin-bottom: 65px;
+        .slick-active {
+            background: $secondary-color;
+        }
+    } 
+    .slick-list {
+        margin-bottom: 60px;
     }
 }
 
 .item-partner-coment {
     text-align: center;
-    background: #ffffff;
-    border-radius: 30px;
-    padding: 60px 44px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 60px 40px;
 
     &__img {
         width: 120px;
         height: 120px;
         border-radius: 50%;
         border: 12px solid #fff;
-        margin: -120px auto 5px;
+        margin: 0px auto 9px;
+        background-color: #fff;
 
         img {
             width: 100%;
@@ -76,13 +85,13 @@
     }
 
     &__position {
-        color: #afb4be;
+        color: #B1AFBE;
         font-size: 16px;
         margin-bottom: 13px;
     }
 
     &__coment {
-        color: #626874;
+        color: #5C5F65;
         font-size: 18px;
         font-weight: 400;
     }

@@ -3,11 +3,12 @@ $font-primary: "Rubik";
 $font-secondary: "KyivTypeSerif";
 $font-size: 16px;
 $line-height: 1.5;
-$text: #626874;
+$text: #5C5F65;
 $section-title: 32px;
 ///colors///
 $white: #fff;
 $black: #171D32;
+$gray: #5C5F65;
 
 $primary-color: #3943BC;
 $primary-color-hover: #5864F9;
@@ -22,22 +23,33 @@ $label-purpur: #8683ef;
 $label-green: #70d61f;
 
 $required: $primary-color;
-$placeholder: #626874;
+$placeholder: #5C5F65;
 
  
 
 
 
 /*   <Breadcrumbs/>   */
-$breadcrumbs-slash: #afb4be;
+$breadcrumbs-slash: #B1AFBE;
 $breadcrumbs-link: #3c597d;
 $breadcrumbs-link-hover: $primary-color;
-$breadcrumbs-last-child: #afb4be;
+$breadcrumbs-last-child: #B1AFBE;
 
 /*   <Muve-top/>   */
 $muve-top-background: $primary-color;
 $muve-top-color: #fff;
 
-@mixin custom-decorate { 
-    background: url(assets/img/custom-decorate.svg) calc(100% - 60px) center no-repeat  $primary-color;
+@mixin custom-decorate-r { 
+    background: url(assets/img/custom-decorate.svg) calc(100% - 60px) center no-repeat repeat  $primary-color;
+ }
+ @mixin custom-decorate-l { 
+    content: "";
+    position: absolute;
+    left: 60px;
+    top: 0;
+    height: 100%;
+    width: 120px;
+    display: block;
+    z-index: -1;
+    background: url(assets/img/custom-decorate.svg) center no-repeat repeat  $primary-color;
  }

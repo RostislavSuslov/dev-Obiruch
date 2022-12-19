@@ -16,25 +16,26 @@
 
     &__info {
         max-width: 315px;
-
-        &-title {
+        text-align: center;
+        &-title {   
             font-weight: 600;
-            font-size: 42px;
-            color: #5864F9;
+            font-size: 44px;
+            color: $secondary-color;
+            font-family: $font-secondary    ;
             margin-bottom: 9px;
         }
 
         p {
             font-weight: 400;
             font-size: 16px;
-            color: #afb4be;
+            color: #CBD0DA;
         }
     }
 
     .row-custom-info {
         padding-top: 70px;
         margin-top: 70px;
-        border-top: 2px solid #3c597d;
+        border-top: 2px solid #5C5F65;
     }
 
     .row-btn {
@@ -51,10 +52,12 @@
         h2 {
             color: #ffffff;
             margin-bottom: 30px;
+            font-size: 44px;
+            font-family: $font-secondary;
         }
 
         p {
-            color: #afb4be;
+            color: #CBD0DA;
         }
     }
 
@@ -66,7 +69,7 @@
 
 .item-about {
     padding: 30px;
-    background-color: #fff;
+    background-color: $primary-color;
     box-shadow: 0px 6px 12px rgba(11, 48, 93, 0.15);
     border-radius: 12px;
     display: flex;
@@ -79,15 +82,16 @@
     }
 
     &__title {
-        color: #0b305d;
-        font-size: 18px;
+        color: #fff;
+        font-size: 20px;
         font-weight: 600;
         margin-bottom: 12px;
         line-height: 1.33;
+        font-family: $font-secondary;
     }
 
     &__descr {
-        color: #626874;
+        color: #fff;
         font-size: 16px;
         line-height: 1.5;
     }

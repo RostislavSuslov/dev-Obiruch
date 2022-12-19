@@ -79,8 +79,8 @@
 
 body {
     font-family: $font-primary;
-    color: #626874;
-    background-color: #edf1f4;
+    color: #5C5F65;
+    background-color: #E5E5E5;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -310,7 +310,7 @@ input[type="radio"] {
             width: 30px;
             height: 30px;
             background-color: #ffffff;
-            border: 1px solid #afb4be;
+            border: 1px solid #B1AFBE;
             border-radius: 4px;
             transition: 0.1s;
             background-position: center;

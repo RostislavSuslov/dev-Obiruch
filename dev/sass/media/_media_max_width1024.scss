@@ -16,11 +16,18 @@
         margin-bottom: 27px;
     }
 
-    // .title-icon {
-    //     + .slick-slider {
-    //         margin-top: 50px;
-    //     }
-    // }
+
+    .header__menu-wrap {
+        > nav {
+            > ul {
+                > li {
+                    > a {
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
 
     .projects-filters {
         .col-lg-3 {
@@ -265,7 +272,7 @@
                     display: flex;
                     align-items: center;
                     text-align: center;
-                    color: #626874;
+                    color: #5C5F65;
                     text-decoration: none;
                 }
 
@@ -414,17 +421,21 @@
 
     .form-questions {
         margin-bottom: 33px;
+
         .title-icon {
             margin-bottom: 30px;
             font-size: 24px;
         }
     }
+
     .contact-row {
         margin: 36px auto 60px;
+
         .contacts {
             margin-bottom: 60px;
         }
     }
+
     .contact-item {
         margin-bottom: 28px;
     }

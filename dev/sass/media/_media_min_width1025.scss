@@ -1,3 +1,11 @@
 @media (min-width: 1025px) {
-
+    .sub-menu {
+		@include custom-decorate-r;
+    }
+    .home-top__benefits{
+      position: relative;
+      &::before{
+          @include custom-decorate-l;
+      }
+    }
 }

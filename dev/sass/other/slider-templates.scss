@@ -3,7 +3,7 @@
 
     li {
         border-radius: 50%;
-        background:#AFB4BE;
+        background:#CBD0DA;
         margin: 0px 15px;
         font-size: 0;
         width: 12px;
@@ -29,20 +29,20 @@
     }
 }
 .item-project {
-    border-radius: 24px;
+    border-radius: 12px;
     overflow: hidden;
 
     &--news {}
 
     &__title {
         display: flex;
+        flex-direction: row-reverse;
         align-items: center;
         justify-content: space-between;
-        color: #0b305d;
+        color: $primary-color;
         font-size: 18px;
         font-weight: 600;
         line-height: 24px;
-
         svg {
             width: 60px;
             height: 60px;
@@ -54,8 +54,10 @@
         }
 
         a {
+            font-weight: 500;
+            font-size: 20px;
             text-decoration: none;
-            color: #0b305d;
+            color: $black;
             overflow: hidden;
             text-overflow: ellipsis;
             display: -moz-box;
@@ -65,7 +67,7 @@
             -webkit-box-orient: vertical;
             line-clamp: 2;
             box-orient: vertical;
-
+            font-family: $font-secondary;
             &:hover {
                 color: #5864F9;
             }
@@ -130,42 +132,50 @@
     }
 
     &__wrap-sum {
-        box-shadow: 0px 0px 18px rgba(11, 48, 93, 0.2);
-        border-radius: 12px;
-        background-color: #fff;
+        border-radius: 6px;
+        background-color: #F5F2EA;
         display: flex;
         align-items: center;
-        margin: 25px 0px;
+        margin: 24px 0px;
 
         >div {
             width: 50%;
-            padding: 10px 20px;
+            padding: 15px 20px;
 
             &:last-child {
-                border-left: 2px solid #edf1f4;
+                border-left: 2px solid #ffffff;
             }
 
             span {
                 display: block;
 
                 &:first-child {
-                    color: #afb4be;
+                    color: #B1AFBE;
                     font-size: 14px;
                     font-weight: 600;
+                    text-align: center;
+                    color: #B1AFBE;
+                    font-size: 14px;
+                    line-height: 24px;
+                    font-weight: 500;
                 }
 
                 &:last-child {
-                    color: #626874;
-
+                    color: #5C5F65;
                     font-size: 18px;
+                    line-height: 30px;
                     font-weight: 400;
+                    text-align: center;
                 }
             }
 
             b {
-                color: #0b305d;
+                color: $primary-color;
                 font-size: 18px;
                 font-weight: 600;
+                font-family: $font-secondary;
+                display: block;
+                text-align: center;
             }
         }
     }
@@ -179,19 +189,19 @@
         
         span {
             &:first-child {
-                font-weight: 600;
                 font-size: 16px;
-
-                color: #626874;
+                font-weight: 500;
+                color: #5C5F65;
             }
 
             &:last-child {
                 font-size: 14px;
+                color: #B1AFBE;
             }
         }
 
         &-now {
-            color: #16bb58;
+            color: #16bb58!important;
         }
 
         &-last {
@@ -215,7 +225,7 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 19px;
-        color: #AFB4BE;
+        color: #B1AFBE;
 
         span {
             display: flex;
@@ -229,7 +239,7 @@
         .end-acton {
             color: #626874;
             span {
-                color: #AFB4BE;
+                color: #B1AFBE;
                 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cg clip-path='url(%23clip0_163_4912)'%3E%3Cpath d='M10.5 9.75C10.5012 10.0136 10.4329 10.2728 10.302 10.5016C10.1711 10.7304 9.98225 10.9207 9.75442 11.0533C9.52659 11.1858 9.26785 11.256 9.00426 11.2568C8.74067 11.2575 8.48154 11.1888 8.25296 11.0575C8.02439 10.9262 7.83444 10.737 7.70226 10.509C7.57008 10.2809 7.50032 10.0221 7.50002 9.75849C7.49972 9.4949 7.56889 9.23588 7.70055 9.00753C7.83222 8.77918 8.02173 8.58955 8.25 8.45775V5.25C8.25 5.05109 8.32902 4.86032 8.46967 4.71967C8.61033 4.57902 8.80109 4.5 9 4.5C9.19892 4.5 9.38968 4.57902 9.53033 4.71967C9.67099 4.86032 9.75 5.05109 9.75 5.25V8.45775C9.97734 8.58848 10.1663 8.77669 10.2979 9.0035C10.4296 9.23032 10.4993 9.48776 10.5 9.75V9.75ZM15.045 4.15425C16.1378 5.33084 16.8634 6.80075 17.1329 8.38372C17.4025 9.9667 17.2042 11.5939 16.5624 13.0659C15.9207 14.5378 14.8633 15.7905 13.5199 16.6702C12.1766 17.55 10.6058 18.0186 9 18.0186C7.39424 18.0186 5.82338 17.55 4.48006 16.6702C3.13674 15.7905 2.07936 14.5378 1.43758 13.0659C0.795799 11.5939 0.597522 9.9667 0.867064 8.38372C1.13661 6.80075 1.86225 5.33084 2.955 4.15425L2.451 3.594C2.14564 3.70149 1.82371 3.7543 1.5 3.75C1.30109 3.75 1.11033 3.67098 0.969674 3.53033C0.829022 3.38968 0.750005 3.19891 0.750005 3C0.750005 2.80109 0.829022 2.61032 0.969674 2.46967C1.11033 2.32902 1.30109 2.25 1.5 2.25C2.08875 2.25 2.25 2.08875 2.25 1.5C2.25 1.30109 2.32902 1.11032 2.46967 0.96967C2.61033 0.829018 2.80109 0.75 3 0.75C3.19892 0.75 3.38968 0.829018 3.53033 0.96967C3.67099 1.11032 3.75 1.30109 3.75 1.5C3.75437 1.86497 3.68286 2.22687 3.54 2.56275L4.0695 3.15075C5.28608 2.23521 6.73373 1.67682 8.25 1.53825V0.75C8.25 0.551088 8.32902 0.360322 8.46967 0.21967C8.61033 0.0790177 8.80109 0 9 0C9.19892 0 9.38968 0.0790177 9.53033 0.21967C9.67099 0.360322 9.75 0.551088 9.75 0.75V1.53825C11.2662 1.6766 12.7138 2.23472 13.9305 3.15L14.46 2.562C14.3172 2.22635 14.2457 1.86472 14.25 1.5C14.25 1.30109 14.329 1.11032 14.4697 0.96967C14.6103 0.829018 14.8011 0.75 15 0.75C15.1989 0.75 15.3897 0.829018 15.5303 0.96967C15.671 1.11032 15.75 1.30109 15.75 1.5C15.75 2.08875 15.9113 2.25 16.5 2.25C16.6989 2.25 16.8897 2.32902 17.0303 2.46967C17.171 2.61032 17.25 2.80109 17.25 3C17.25 3.19891 17.171 3.38968 17.0303 3.53033C16.8897 3.67098 16.6989 3.75 16.5 3.75C16.1763 3.7543 15.8544 3.70149 15.549 3.594L15.045 4.15425ZM15.75 9.75C15.75 8.41498 15.3541 7.10993 14.6124 5.9999C13.8707 4.88987 12.8165 4.02471 11.5831 3.51381C10.3497 3.00292 8.99252 2.86925 7.68314 3.1297C6.37377 3.39015 5.17104 4.03303 4.22703 4.97703C3.28303 5.92103 2.64015 7.12377 2.3797 8.43314C2.11925 9.74251 2.25293 11.0997 2.76382 12.3331C3.27471 13.5665 4.13987 14.6207 5.24991 15.3624C6.35994 16.1041 7.66498 16.5 9 16.5C10.7896 16.498 12.5053 15.7862 13.7708 14.5208C15.0362 13.2553 15.748 11.5396 15.75 9.75V9.75Z' fill='%23FFD018'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_163_4912'%3E%3Crect width='18' height='18' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
                 background-repeat: no-repeat;
                 padding-left: 28px;
@@ -272,7 +282,7 @@
         background-position: center;
         background-repeat: no-repeat;
         transition: all 0.2s;
-
+        top: 45%;
         &::before {
             display: none;
         }
