@@ -1,0 +1,54 @@
+@media screen and (max-width: 767px) {
+
+
+    .article {
+        h1.title-icon {
+            max-width: 1046px;
+            padding: 0 12px;
+            margin: 0px auto 12px;
+        }
+
+        .post-item {
+            padding: 13px 12px 60px;
+            border-radius: 0;
+            margin: 0 -20px;
+        }
+    }
+
+    h1,
+    .title_1 {
+        font-size: 28px;
+    }
+
+    h2,
+    .title_2 {
+        font-size: 25px;
+    }
+
+    h3,
+    .title_3 {
+        font-size: 23px;
+    }
+
+    h4,
+    .title_4 {
+        font-size: 21px;
+    }
+
+    h5,
+    .title_5 {
+        font-size: 19px;
+    }
+
+    h6,
+    .title_6 {
+        font-size: 17px;
+    }
+
+    .lang-dropdown__menu{
+        top: 70px;
+    }
+    .phone-dropdown__menu {
+        top: 80px;
+    }
+}
