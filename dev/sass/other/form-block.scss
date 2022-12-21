@@ -1,3 +1,7 @@
+.form {
+    background: url(assets/img/custom-decorate.svg) calc(100% - 60px) center no-repeat repeat,
+                url(assets/img/custom-decorate.svg) 60px center no-repeat repeat $primary-color;
+}
 
 .input-wrap {
     position: relative;
@@ -59,73 +63,74 @@
 
 .form-tab {
     background-color: #fff;
-    padding: 40px 80px 40px;
+    padding: 0 75px 48px;
     max-width: 660px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0px 12px 30px rgba(11, 48, 93, 0.15);
-    border-radius: 18px;
+    box-shadow: 0px 12px 30px #0b305d26;
+    border-radius: 6px;
     position: relative;
-
-    &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        height: 13px;
-        background: #5864F9;
-        border-radius: 18px 18px 0px 0px;
-    }
 
     &__tabs {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: 0 -75px;
 
         .btn-tab {
-            width: 240px;
-            min-height: 48px;
+            width: 100%;
+            min-height: 60px;
             display: flex;
             justify-content: center;
             align-items: center;
             font-weight: 600;
             font-size: 18px;
+            font-family: $font-secondary;
+            line-height: 1.33;
             border-radius: 6px;
             background: #edf1f4;
-            margin: 0px 10px;
-            position: relative;
+            color: $text;
             cursor: pointer;
             text-align: center;
             padding: 10px;
+            transition: .5s;
+            border-radius: 8px 8px 0 0;
+            position: relative;
+            top: 0;
 
             &::after {
                 content: "";
                 position: absolute;
-                width: 9px;
-                height: 9px;
-                background: $primary-color;
+                top: calc(100% - 3px);
                 left: 50%;
-                transform: rotate(45deg) translateX(-50%);
-                bottom: -7px;
+                transform: translate(-50%, 0);
+                width: 0;
                 opacity: 0;
+                height: 3px;
+                background-color: $secondary-color;
+                transition: .3s;
             }
 
             &--active {
-                background: $primary-color !important;
-                color: #fff;
                 pointer-events: none;
+                border-radius: 8px 8px 0 0;
+                color: #171D32;
                 transition: all 0s !important;
+                background: #fff !important;
+                top: -6px;
+                transition: .5s;
 
                 &::after {
+                    width: 165px;
                     opacity: 1;
+                    top: 100%;
                 }
             }
 
             &:hover {
-                background: #5864F9;
-                color: #fff;
+                color: #171D32;
                 transition: all 0.2s;
+
             }
         }
     }
@@ -136,11 +141,10 @@
 
     &__descr {
         text-align: center;
-        margin-top: 20px;
-        margin-bottom: 15px;
+        margin: 30px 0 17px;
 
         span {
-            color: #5864F9;
+            color: $primary-color;
         }
     }
 
@@ -155,7 +159,6 @@
     textarea {
         height: 108px;
         resize: none;
-        border-radius: 18px;
     }
 
     .btn {
@@ -164,11 +167,27 @@
     }
 }
 
+#btn-need {
+    border-radius: 8px 0 0 0;
+
+    &.btn-tab--active {
+        border-radius: 8px 8px 0 0;
+    }
+}
+
+#btn-want {
+    border-radius: 0 8px 0 0;
+
+    &.btn-tab--active {
+        border-radius: 8px 8px 0 0;
+    }
+}
+
+
 .select {
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid #e1e1e1;
-    border-radius: 30px;
+    border: 1px solid #CBD0DA;
     padding: 11px 35px 11px 20px;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     font-size: 16px;
@@ -191,7 +210,7 @@
         border: 1px solid $secondary-color;
         box-shadow: none;
         outline: none;
-        color: #0b305d;
+        color: $primary-color;
     }
 
     &::after {
@@ -199,7 +218,7 @@
         position: absolute;
         right: 14px;
         top: 26px;
-        background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.5897 0.841713C11.5123 0.763606 11.4201 0.701611 11.3185 0.659304C11.217 0.616996 11.1081 0.595215 10.9981 0.595215C10.888 0.595215 10.7791 0.616996 10.6776 0.659304C10.576 0.701611 10.4839 0.763606 10.4064 0.841713L6.58972 4.65837C6.51225 4.73648 6.42009 4.79847 6.31854 4.84078C6.21699 4.88309 6.10807 4.90487 5.99806 4.90487C5.88805 4.90487 5.77912 4.88309 5.67758 4.84078C5.57603 4.79847 5.48386 4.73648 5.40639 4.65837L1.58972 0.841713C1.51225 0.763606 1.42009 0.701611 1.31854 0.659304C1.21699 0.616996 1.10807 0.595215 0.998056 0.595215C0.888046 0.595215 0.779125 0.616996 0.677576 0.659304C0.576026 0.701611 0.483859 0.763606 0.40639 0.841713C0.25118 0.997848 0.164063 1.20906 0.164062 1.42921C0.164063 1.64937 0.25118 1.86058 0.40639 2.01671L4.23139 5.8417C4.70014 6.30987 5.33555 6.57284 5.99806 6.57284C6.66056 6.57284 7.29597 6.30987 7.76472 5.8417L11.5897 2.01671C11.7449 1.86058 11.8321 1.64937 11.8321 1.42921C11.8321 1.20906 11.7449 0.997848 11.5897 0.841713Z' fill='%23374957'/%3E%3C/svg%3E%0A");
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.5897 0.841713C11.5123 0.763606 11.4201 0.701611 11.3185 0.659304C11.217 0.616996 11.1081 0.595215 10.9981 0.595215C10.888 0.595215 10.7791 0.616996 10.6776 0.659304C10.576 0.701611 10.4839 0.763606 10.4064 0.841713L6.58972 4.65837C6.51225 4.73648 6.42009 4.79847 6.31854 4.84078C6.21699 4.88309 6.10807 4.90487 5.99806 4.90487C5.88805 4.90487 5.77912 4.88309 5.67758 4.84078C5.57603 4.79847 5.48386 4.73648 5.40639 4.65837L1.58972 0.841713C1.51225 0.763606 1.42009 0.701611 1.31854 0.659304C1.21699 0.616996 1.10807 0.595215 0.998056 0.595215C0.888046 0.595215 0.779125 0.616996 0.677576 0.659304C0.576026 0.701611 0.483859 0.763606 0.40639 0.841713C0.25118 0.997848 0.164063 1.20906 0.164062 1.42921C0.164063 1.64937 0.25118 1.86058 0.40639 2.01671L4.23139 5.8417C4.70014 6.30987 5.33555 6.57284 5.99806 6.57284C6.66056 6.57284 7.29597 6.30987 7.76472 5.8417L11.5897 2.01671C11.7449 1.86058 11.8321 1.64937 11.8321 1.42921C11.8321 1.20906 11.7449 0.997848 11.5897 0.841713Z' fill='%23171D32'/%3E%3C/svg%3E");
         width: 14px;
         height: 9px;
         background-size: contain;
@@ -217,14 +236,12 @@
         background-color: #fff;
         border: 1px solid #cbd0da;
         border-radius: 6px;
-        padding: 20px;
+        padding: 20px 0;
         width: 100%;
         font-weight: 400;
         font-size: 16px;
 
-        li:hover {
-            color: #5864F9;
-        }
+
     }
 
     ul li:before {
@@ -232,7 +249,13 @@
     }
 
     .option {
-        padding: 0;
+        padding: 0 20px;
+
+        &:not(.disabled):hover {
+            color: #fff;
+            background-color: #5864F9;
+
+        }
     }
 }
 
@@ -242,14 +265,19 @@
         position: relative;
         margin-left: auto;
         margin-right: auto;
-
+        input[type="email"] {
+            padding-right: 185px;
+        }
         .btn {
             position: absolute;
             right: 3px;
             top: 3px;
+            padding: 11px 29px; 
         }
+       
     }
 }
+
 .home {
     .form {
         margin-bottom: 0;
@@ -259,18 +287,35 @@
 .form {
     position: relative;
 
+    .wrapper {
+        padding: 90px 15px 100px;
+    }
+
+    .title-icon {
+        color: #fff;
+    }
+
+    .title-descr {
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        color: #CBD0DA;
+    }
+
     .abs-form-img {
         position: absolute;
         bottom: 30px;
 
         &-l {
-            left: -300px;
-            width: 928px;
+            left: 0;
+            bottom: 0;
+            width: 650px;
         }
 
         &-r {
-            right: -108px;
-            width: 560px;
+            right: 0;
+            bottom: 0;
+            width: 700px;
         }
     }
 }

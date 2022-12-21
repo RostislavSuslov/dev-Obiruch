@@ -1,13 +1,16 @@
-
 .subscribe {
+    background: url(assets/img/subscribe-left.svg)  bottom left / 30% no-repeat,
+                url(assets/img/subscribe-right.svg) bottom right / 30% no-repeat,
+                url(assets/img/custom-decorate.svg) calc(100% - 60px) center no-repeat repeat,
+                url(assets/img/custom-decorate.svg) 60px center no-repeat repeat $primary-color;
     >img {
         width: 100%;
         height: auto;
     }
 
     &__content {
-        background-color: #002c5e;
-        padding: 60px 0px;
+ 
+        padding: 97px 0px 114px;
     }
 
     .title-icon {

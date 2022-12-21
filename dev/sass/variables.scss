@@ -30,10 +30,10 @@ $placeholder: #5C5F65;
 
 
 /*   <Breadcrumbs/>   */
-$breadcrumbs-slash: #B1AFBE;
-$breadcrumbs-link: #3c597d;
-$breadcrumbs-link-hover: $primary-color;
+$breadcrumbs-link: $primary-color;
+$breadcrumbs-link-hover: $secondary-color;
 $breadcrumbs-last-child: #B1AFBE;
+$breadcrumbs-slash: #B1AFBE;
 
 /*   <Muve-top/>   */
 $muve-top-background: $primary-color;

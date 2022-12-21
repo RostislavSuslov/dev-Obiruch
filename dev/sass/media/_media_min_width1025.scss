@@ -1,11 +1,23 @@
-@media (min-width: 1025px) {
+@media (min-width: 992px) {
     .sub-menu {
-		@include custom-decorate-r;
+        @include custom-decorate-r;
     }
-    .home-top__benefits{
-      position: relative;
-      &::before{
-          @include custom-decorate-l;
-      }
+
+    .home-top__benefits {
+        position: relative;
+
+        &::before {
+            @include custom-decorate-l;
+        }
     }
+
+    .partner {
+      background: url(assets/img/review-decorate-right.png) right bottom no-repeat,
+                  url(assets/img/review-decorate-left.png) left bottom no-repeat,
+                  url(assets/img/custom-decorate.svg) calc(100% - 60px) center no-repeat repeat,
+                  url(assets/img/custom-decorate.svg) 60px center no-repeat repeat;
+      background-color: $primary-color;
+    }
+    
+   
 }

@@ -37,8 +37,9 @@
         text-align: center;
         color: #5C5F65;
         font-size: 18px;
-        font-weight: 600;
+        font-weight: 500;
         position: relative;
+        font-family: $font-secondary;
         &::before{
             content: "";
             position: absolute;
@@ -47,7 +48,7 @@
             transform: translate(-50%, 0);
             width: 0;
             height: 3px;
-            background-color: #005BBB;
+            background-color: $primary-color;
             transition: .3s;
         }
         &.active {

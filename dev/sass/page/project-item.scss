@@ -23,14 +23,14 @@
 
         &-title {
             display: flex;
-
+            flex-direction: row-reverse;
 
             h1 {
                 font-weight: 600;
                 font-size: 32px;
                 line-height: 1.31;
-                color: #0b305d;
-                padding-right: 45px;
+                color: #171D32;
+                padding-left: 45px;
             }
         }
 
@@ -38,18 +38,21 @@
             transform: scale(1.4167);
             margin: auto 0 auto auto;
             position: relative;
-            right: 11px;
+            left: 11px;
+            font-family: $font-secondary;
         }
 
         .item-project__wrap-sum {
             margin-bottom: 42px;
-
+            
             >div {
                 width: 50%;
                 padding: 25px 20px;
 
                 b {
                     font-size: 18px;
+                    color: #171D32;
+                    font-family: $font-secondary;
                 }
 
                 span {
@@ -60,9 +63,12 @@
                 }
             }
 
-            &-to {
-                border-left: 2px solid #edf1f4;
-            }
+           
+            .item-project__wrap-sum-to,
+            .item-project__wrap-joined {
+             
+                border-left: 3px solid #e5e5e5;
+            } 
         }
 
         .btn {
@@ -70,7 +76,10 @@
             min-width: 260px;
             justify-content: center;
         }
+
+        
     }
+
 }
 
 .who-supported-person {
@@ -136,7 +145,7 @@
     &.anonymous,
     &.no-photo {
         .who-supported-person__photo {
-            background-color: #005BBB;
+            background-color: $primary-color;
             color: #fff;
             font-family: 'Inter';
             font-style: normal;

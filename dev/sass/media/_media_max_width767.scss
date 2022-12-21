@@ -51,4 +51,8 @@
     .phone-dropdown__menu {
         top: 80px;
     }
+
+    .form-tab__tabs .btn-tab--active::after {
+        display: none;
+    }
 }

@@ -70,7 +70,7 @@
 .item-about {
     padding: 30px;
     background-color: $primary-color;
-    box-shadow: 0px 6px 12px rgba(11, 48, 93, 0.15);
+    box-shadow: 0px 6px 12px #0b305d26;
     border-radius: 12px;
     display: flex;
 
@@ -84,7 +84,6 @@
     &__title {
         color: #fff;
         font-size: 20px;
-        font-weight: 600;
         margin-bottom: 12px;
         line-height: 1.33;
         font-family: $font-secondary;

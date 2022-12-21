@@ -1,7 +1,13 @@
-
 .partner {
     padding: 90px 0;
-    background-color: $primary-color;
+    position: relative;
+   
+    
+    // &:before{
+    //     @include custom-decorate-l;
+    //     z-index: 0;
+
+    // }
 
     .wrapper-partner-slider {
         max-width: 1840px;
@@ -19,8 +25,8 @@
     max-width: 1240px;
     margin: 0 auto;
     padding: 0 60px;
+
     .item-partner-coment {
-        margin: 0;
         opacity: 0.5;
         transform: scale(0.8);
         transition: all 0.3s;
@@ -43,13 +49,15 @@
         background: #cbd0da;
     }
 
-    .slick-dots{
+    .slick-dots {
         position: static;
         margin-bottom: 65px;
+
         .slick-active {
             background: $secondary-color;
         }
-    } 
+    }
+
     .slick-list {
         margin-bottom: 60px;
     }
@@ -60,6 +68,7 @@
     background: #fff;
     border-radius: 12px;
     padding: 30px 60px 40px;
+    margin: 0 10px;
 
     &__img {
         width: 120px;
