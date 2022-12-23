@@ -8,6 +8,9 @@
     &__img {
         max-width: 745px;
         width: 100%;
+        img {
+            border-radius: 6px;
+        }
     }
 
     &__options {
