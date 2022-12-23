@@ -1,7 +1,22 @@
 .form-questions {
     margin-bottom: 78px;
 
+    .form-tab {
+        padding-top: 45px;
+    }
+
     .title-icon {
         margin-bottom: 60px;
     }
+}
+
+.modal-body{
+    .form-tab__tabs {
+        .btn-tab--active {
+            top: 5px;
+            &::after {
+                top: 50px;
+            }
+        }
+    } 
 }

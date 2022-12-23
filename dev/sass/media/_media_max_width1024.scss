@@ -359,11 +359,9 @@
     .about-page {
         .first-screen {
             margin-top: -105px;
-            padding-top: 105px;
-            padding-bottom: 24px;
             margin-bottom: 0;
             min-height: auto;
-
+            padding: 105px 12px 24px;
             h1 {
                 font-size: 32px;
                 margin-bottom: 22px;
@@ -484,5 +482,9 @@
     .seo-text {
         margin: 55px 0;
     }
-
+    .about-page {
+        .about{
+            background:    url(assets/img/custom-decorate.svg) calc(100% - 60px) center no-repeat repeat #3943BC !important;
+        }
+    } 
 }
