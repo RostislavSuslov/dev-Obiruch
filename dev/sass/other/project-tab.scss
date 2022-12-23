@@ -55,6 +55,7 @@
             
             background-color: transparent;
             color: $primary-color;
+            cursor: default;
             &::before{
                 width: 100%;
             }
