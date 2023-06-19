@@ -16,7 +16,7 @@
         }
 
         .btn {
-            margin-top: 20px;
+            margin: 36px auto 20px;
         }
 
         &-item {}
@@ -38,11 +38,12 @@
             align-items: center;
             justify-content: space-between;
             padding: 100px 0px 60px;
+            min-height: 68vh;
         }
 
         &-img {
             width: 660px;
-
+            display: none;
             img {
                 width: 100%;
                 height: auto;
@@ -51,7 +52,9 @@
         }
 
         &-text {
-            max-width: 560px;
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: center;
         }
     }
 

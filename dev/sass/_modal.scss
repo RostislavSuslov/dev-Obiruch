@@ -7,7 +7,7 @@
 	align-items: center;
 	// max-width: 890px;
 	max-width: 660px;
-	min-height: calc(100% - (5rem * 2));
+	min-height: calc(100% - 10rem);
 }
 
 .modal-header {
@@ -190,7 +190,7 @@ input[type="tel"] {
 		align-items: center;
 		max-width: 530px;
 		margin: 0 auto;
-		min-height: calc(100% - (5rem * 2));
+		min-height: calc(100% - 10rem);
 	}
 }
 

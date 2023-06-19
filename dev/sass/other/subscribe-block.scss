@@ -6,6 +6,7 @@
     >img {
         width: 100%;
         height: auto;
+        display: none;
     }
 
     &__content {
@@ -21,3 +22,9 @@
         color: #B1AFBE;
     }
 }
+.about-page .subscribe,
+.action-page .subscribe,
+.article .subscribe {
+  margin-top: 100px
+}
+
