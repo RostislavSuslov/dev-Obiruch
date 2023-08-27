@@ -12,7 +12,45 @@
             Благодійний фонд «Обіруч» прагне допомогти всім, хто шукає своїх близьких або знайомих, які зникли безвісті пiд час війни або за будь-яких інших обставин.
         </p>
         @@include('templates/people-filters.html')
-        @@include('templates/projects-grid.html')
+        <div class="template-grid">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="person">
+                            <div class="person-img-box">
+                                <img src="assets/img/find-woman-2.png" class="img-fluid" alt="woman">
+                                <div class="person-status">Триває пошук</div>
+                            </div>
+                            <div class="person-name">Норма Джин Мортенсон</div>
+                            <div class="person-date">01.07.1926 р.н.</div>
+                            <div class="person-place">
+                                <div class="person-place-title">Місце зникнення:</div>
+                                <div class="person-place-adress">Донецька обл., Бахмутський р-н, с. Богданiвка</div>
+                            </div>
+                            <div class="person-details">Детальніше про людину</div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="person">
+                            <div class="person-img-box">
+                                <img src="assets/img/find-childrens-1.png" class="img-fluid" alt="childrens">
+                                <div class="person-status">Триває пошук</div>
+                            </div>
+                            <div class="person-name">Скрипко Юлія i  Скрипко  Микита Михайловичi</div>
+                            <div class="person-date">11.02.2014 р.н.  11.02.2020 р.н.  </div>
+                            <div class="person-place">
+                                <div class="person-place-title">Місце зникнення:</div>
+                                <div class="person-place-adress">Чернiгiвська обл., р-н Новгород-Сіверський, c. Великий Гай</div>
+                            </div>
+                            <div class="person-details">Детальніше про людину</div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        
         @@include('templates/pagination.html')
         @@include('templates/form.html')
         @@include('templates/block.html')
