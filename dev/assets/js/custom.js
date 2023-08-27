@@ -13,6 +13,7 @@ $(document).ready(function() {
             },
         }, ],
     });
+
     $(".slider-def-three-el").slick({
         slidesToShow: 3,
         arrows: true,
@@ -116,3 +117,6 @@ $(document).ready(function() {
     });
 
 });
+
+
+ 

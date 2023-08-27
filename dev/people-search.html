@@ -1,10 +1,21 @@
 @@include('templates/head.html')
 @@include('templates/header.html')
-<main class="page-people-search">
-    <div class="info-box">
-        <h2>Помилка 404: сторінку не знайдено</h2>
-        <h6>Нажаль, сторінка, яку ви шукаєте, була видалена або ніколи не існувала. Скористайтесь меню, щоб перейти в потрібний розділ, або поверніться на головну</h6>
-        <a href="index.html" class="btn btn-primary">Повернутися на головну</a>
-    </div>
+<main class="people-search">
+    
+        @@include('templates/breadcrumbs.html')
+        <h1 class="title-icon">
+            <i class="icon-svg icon-hand"></i>
+            <span>Пошук безвiсно зниклих пiд час вiйни</span>
+          
+        </h1>
+        <p class="title-descr">
+            Благодійний фонд «Обіруч» прагне допомогти всім, хто шукає своїх близьких або знайомих, які зникли безвісті пiд час війни або за будь-яких інших обставин.
+        </p>
+        @@include('templates/people-filters.html')
+        @@include('templates/projects-grid.html')
+        @@include('templates/pagination.html')
+        @@include('templates/form.html')
+        @@include('templates/block.html')
+        @@include('templates/seo-text.html')
 </main>
 @@include('templates/footer.html')

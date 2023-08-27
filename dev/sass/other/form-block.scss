@@ -3,10 +3,14 @@
                 url(assets/img/custom-decorate.svg) 60px center no-repeat repeat $primary-color;
 }
 
-.input-wrap {
+.projects-filters__select-box {
+    position: relative;
+}
+
+.input-wrap, .nice-select {
     position: relative;
 
-    .icon-wrap {
+    + .icon-wrap,.icon-wrap {
         position: absolute;
         right: 16px;
         top: 14px;
@@ -34,7 +38,32 @@
             }
         }
     }
-
+    + .icon-wrap{
+        .note {
+            background-color: #fff;
+            position: absolute;
+            width: 370px;
+            text-align: center;
+            padding: 16px 20px 14px;
+            left: -191px;
+            bottom: 45px;
+            box-shadow: 0px 0px 18px rgba(11, 48, 93, 0.2);
+            border-radius: 6px;
+            opacity: 0;
+            pointer-events: none;
+    
+            &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: -10px;
+                width: 30px;
+                height: 30px;
+                background-color: #fff;
+                transform: rotate(45deg);
+            }
+        }
+    }
     .note {
         background-color: #fff;
         position: absolute;

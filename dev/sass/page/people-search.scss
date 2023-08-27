@@ -1,0 +1,45 @@
+.people-filters {
+    .input-wrap {
+        position: initial;
+        .icon-wrap  {
+            right: 5px;
+            top: 0px;
+        }
+    }
+    .wrapper {
+
+        .nice-select + .icon-wrap  {
+            right: 5px;
+            top: 0px;
+        }
+    }
+
+    .icon-svg {
+        filter: brightness(0) invert(1);
+    }
+    .projects-filters__select-box {
+        .icon-wrap {
+
+            .note{
+                bottom: 37px;
+                z-index: 1;
+                &::after {
+                    bottom: -2px;
+                    z-index: -1;
+                }
+            }
+        } 
+    }
+
+    .col-lg-4{
+        &:last-child {
+            .input-wrap .note{
+                left: -330px;
+                bottom: 37px;
+                &::after {
+                    left: calc(100% - 45px);
+                }
+            }
+        }
+    }
+}
