@@ -1,3 +1,10 @@
+.people-search {
+    .template-grid {
+        [class*="col"] {
+            margin-bottom: 60px;
+        }
+    }
+}
 .people-filters {
     .input-wrap {
         position: initial;

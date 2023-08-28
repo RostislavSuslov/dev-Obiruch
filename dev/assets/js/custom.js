@@ -107,7 +107,7 @@ $(document).ready(function() {
     $(document).mouseup(function(e) {
         div = $(".lang-dropdown, .phone-dropdown, .menu-item-has-children");
         if (!div.is(e.target) && div.has(e.target).length === 0) {
-            console.log(div);
+            // console.log(div);
             div.removeClass("open-dropdown open-menu");
         }
     });
