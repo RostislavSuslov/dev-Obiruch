@@ -461,12 +461,14 @@ const peopleArr = [
 
 window.addEventListener('load', function () {
     const usersContainer = document.querySelector('.users-container') 
-    const genderSelect = document.querySelector('#genderSelect')
-    const genderCustomSelect = document.querySelector('#genderSelect + nice-select')
+    const genderRadio = document.querySelectorAll('[type="radio"]')
     const ageInput = document.querySelector('#ageFilter');
     const nameInput = document.querySelector('#nameFilter');
-    
- 
+    const ageFilterDisplayValue = this.document.querySelector('#ageFilter-value');
+    const minValue = document.querySelector("#min-value")
+    const maxValue = document.querySelector("#max-value")
+    const resetBtn = this.document.querySelector("[type=reset]")
+    /*creat new arr for add key age */
     const updatedPeopleArr = peopleArr.map(person => {
         const birthDate = new Date(person.birth);
         const today = new Date();
@@ -477,12 +479,13 @@ window.addEventListener('load', function () {
 
     console.table(updatedPeopleArr);
 
+    /*render arr*/
     const renderPerson = (persons) => {
         const list = persons.map(person => {
             return(
                 `
                 <div class="col-lg-6 col-xl-3">
-                <div class="person">
+                <div class="person" data-id="${person.id}">
                     <div class="person-img-box">
                         <img src="${person.photo}" class="img-fluid" alt="${person.id}">
                         <div class="person-status">Триває пошук</div>
@@ -512,18 +515,19 @@ window.addEventListener('load', function () {
         }
 
 
-    function getGenderVal() {
-        genderSelect.addEventListener("click", () => {
-                let val = item.getAttribute('value')
-                config.gender = val
-              
-
-                const filteredForGender = mainFilter();
-                renderPerson(filteredForGender);
+        function getGenderVal() {
+            genderRadio.forEach(item => {
+                item.addEventListener("click", () => {
+                    let val = item.getAttribute('value')
+                    config.gender = val
+                  
+    
+                    const filteredForGender = mainFilter();
+                    renderPerson(filteredForGender);
+                })
             })
-      
-    }
-    getGenderVal()
+        }
+        getGenderVal()
     
     function getAgeVal() {
         ageInput.addEventListener("input", (event) => {
@@ -563,7 +567,7 @@ window.addEventListener('load', function () {
     //     return updatedPeopleArr.filter(item => item.name.toLowerCase().includes(config.name))
     // }
 
- 
+
 
 
     function mainFilter() {
@@ -571,15 +575,90 @@ window.addEventListener('load', function () {
             const setAge =  item.age <= config.age
             const setGender = config.gender === "all" ? updatedPeopleArr : item.gender === config.gender 
             const setName = item.name.toLowerCase().includes(config.name) 
-
-            return setName && setGender && setAge
+       
+            return setName && setGender && setAge  
         })
         return filtered;
     }
-
  
 
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // ...
+// Ваш существующий код здесь
+
+const modal = document.querySelector('.modal');
+const closeModalBtn = document.querySelector('.close-modal');
+const modalName = document.querySelector('.modal-name');
+const modalAge = document.querySelector('.modal-age');
+const modalPhoto = document.querySelector('.modal-photo');
+const modalDetails = document.querySelector('.modal-details');
+const modalCity = document.querySelector('.modal-city');
+
+// Функция для открытия модального окна и отображения информации о человеке
+function openModal(person) {
+    modalName.textContent = person.name;
+    modalAge.textContent = person.age + ' лет';
+    modalPhoto.src = person.photo;
+    modalDetails.textContent = person.history;
+    modalCity.textContent = 'Место рождения: ' + person.city;
+    modal.style.display = 'block';
+}
+
+// Закрытие модального окна при клике на кнопку закрытия
+closeModalBtn.addEventListener('click', function () {
+    modal.style.display = 'none';
+});
+
+// Закрытие модального окна при клике вне модального окна
+window.addEventListener('click', function (event) {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+// Обработчик события клика на элемент .person для открытия модального окна
+usersContainer.addEventListener('click', function (event) {
+    const personId = event.target.closest('.person').dataset.id;
+    if (personId) {
+        const selectedPerson = updatedPeopleArr.find(person => person.id === parseInt(personId));
+        if (selectedPerson) {
+            openModal(selectedPerson);
+        }
+    }
+});
+
 })
   

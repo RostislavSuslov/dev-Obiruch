@@ -1,19 +1,29 @@
 <form class="projects-filters people-filters">
     <div class="wrapper">
         <div class="row">
-           
+
             <div class="col-lg-4">
                 <div class="projects-filters__select-box">
                     <div class="select-title">Стать:</div>
-                    <select id="genderSelect" class="select">
-                        <option value="male">Чоловiча</option>
-                        <option value="female">Жіноча</option>
-                        <option value="all">Всi</option>
-                    </select>
+                    <div class="input-wrap">
+                        <div class="btn-box">
+                            <input type="radio" id="all" name="genderFilter" value="all" checked="">
+                            <label for="all">Всi</label>
+                        </div>
+                        <div class="btn-box">
+                            <input type="radio" id="genderFilterMale" name="genderFilter" value="male">
+                            <label for="genderFilterMale">Чоловiки</label>
+                        </div>
+                        <div class="btn-box">
+                            <input type="radio" id="genderFilterFemale" name="genderFilter" value="female">
+                            <label for="genderFilterFemale">Жiнки</label>
+                        </div>
+
+                    </div>
                     <div class="icon-wrap">
                         <i class="icon-svg icon-question"></i>
                         <div class="note">
-                            Напешiть вік особи яку хочете знайти 
+                            Оберiть стать людини
                         </div>
                     </div>
                 </div>
@@ -26,7 +36,7 @@
                         <div class="icon-wrap">
                             <i class="icon-svg icon-question"></i>
                             <div class="note">
-                                Напешiть ім'я особи яку хочете знайти 
+                                Напешiть ім'я особи яку хочете знайти
                             </div>
                         </div>
                     </div>
@@ -34,19 +44,24 @@
             </div>
             <div class="col-lg-4">
                 <div class="projects-filters__select-box">
-                    <div class="select-title">Вік</div>
+                    <div class="select-title">Вік до<div id="ageFilter-value"></div>рокiв</div>
                     <div class="input-wrap">
-                        <input type="number" id="ageFilter" placeholder=" Введіть вік особи " />
+                        <input type="range" id="ageFilter" class="range-slider" min="1" max="100" value="50" />
                         <div class="icon-wrap">
                             <i class="icon-svg icon-question"></i>
                             <div class="note">
-                                Напешiть вік особи яку хочете знайти 
+                                Оберiть вік особи яку хочете знайти
                             </div>
                         </div>
+                        <div class="range-diapason">
+                            <div id="min-value"></div>
+                            <div id="max-value"></div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-            
+
         </div>
         <input class="btn btn-filters-clean" type="reset" value="Очистити фільтри"></input>
     </div>
